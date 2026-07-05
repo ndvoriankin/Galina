@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Галя Голованова-Дворянкина — режиссёр, театральный эксперт</title>
+<style>
+:root{
+  --bg:#160a0f;
+  --bg-2:#1e0d13;
+  --bordo:#5a1220;
+  --bordo-deep:#3d0c17;
+  --gold:#c9a24b;
+  --gold-soft:#e4c785;
+  --cream:#f4ece0;
+  --ink:#eadfce;
+  --muted:#b79b8f;
+  --line:rgba(201,162,75,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(90,18,32,.55), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgba(61,12,23,.5), transparent 55%),
+    linear-gradient(180deg,var(--bg) 0%, var(--bg-2) 100%);
+  color:var(--ink);
+  font-family:Georgia,'Playfair Display',serif;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+a{color:inherit;text-decoration:none}
+.gold{color:var(--gold-soft)}
+.serif-caps{font-variant:small-caps;letter-spacing:.14em}
+.eyebrow{
+  font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--gold);font-weight:600
+}
+
+/* ---------- HERO ---------- */
+header.hero{
+  position:relative;min-height:92vh;display:flex;align-items:center;
+  border-bottom:1px solid var(--line);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(90deg, transparent 0 46px, rgba(201,162,75,.035) 46px 47px);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;padding:120px 0 90px}
+.curtain-top{
+  position:absolute;top:0;left:0;right:0;height:70px;
+  background:linear-gradient(180deg,var(--bordo-deep),transparent);
+  opacity:.8
+}
+.hero h1{
+  font-size:clamp(44px,8vw,104px);line-height:.98;font-weight:400;
+  letter-spacing:-.01em;margin:22px 0 18px;
+  background:linear-gradient(180deg,var(--cream),var(--gold-soft));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero .roles{
+  font-family:Arial,Helvetica,sans-serif;font-size:clamp(14px,1.6vw,18px);
+  letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-bottom:34px
+}
+.hero .roles span{color:var(--gold-soft)}
+.hero .lead{max-width:620px;font-size:clamp(17px,2vw,21px);color:var(--ink);opacity:.92}
+.hero-actions{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:Arial,Helvetica,sans-serif;font-size:14px;letter-spacing:.06em;font-weight:600;
+  padding:15px 30px;border-radius:2px;transition:.28s;cursor:pointer
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--bordo),var(--bordo-deep));
+  color:var(--gold-soft);border:1px solid var(--gold);
+}
+.btn-primary:hover{background:linear-gradient(135deg,#6d1626,#4a0f1c);transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-soft)}
+
+/* ---------- SECTIONS ---------- */
+section{padding:96px 0;position:relative;border-bottom:1px solid var(--line)}
+.sec-head{margin-bottom:52px;max-width:760px}
+.sec-head h2{
+  font-size:clamp(30px,4.4vw,52px);font-weight:400;line-height:1.06;margin:14px 0 0;
+  color:var(--cream)
+}
+.sec-head h2 em{font-style:italic;color:var(--gold-soft)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
+.about-body p{margin-bottom:20px;font-size:18px;color:var(--ink);opacity:.94}
+.about-body p:first-child::first-letter{
+  font-size:64px;float:left;line-height:.8;padding:6px 12px 0 0;color:var(--gold);font-style:italic
+}
+.facts{
+  border:1px solid var(--line);border-radius:3px;padding:30px 28px;
+  background:linear-gradient(180deg,rgba(90,18,32,.22),rgba(61,12,23,.12));
+}
+.facts h3{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+  font-family:Arial,sans-serif;margin-bottom:22px;font-weight:600}
+.fact{padding:14px 0;border-bottom:1px solid rgba(201,162,75,.15)}
+.fact:last-child{border-bottom:none}
+.fact .k{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.fact .v{font-size:17px;color:var(--ink)}
+.fact .v b{color:var(--gold-soft);font-weight:400}
+
+/* services */
+#services{background:linear-gradient(180deg,rgba(61,12,23,.28),transparent)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.svc{
+  position:relative;border:1px solid var(--line);border-radius:3px;
+  padding:38px 34px 34px;background:rgba(22,10,15,.5);transition:.3s;overflow:hidden
+}
+.svc::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--gold),transparent);opacity:.55;transition:.3s
+}
+.svc:hover{border-color:var(--gold);transform:translateY(-4px);
+  background:linear-gradient(180deg,rgba(90,18,32,.3),rgba(22,10,15,.5))}
+.svc:hover::before{opacity:1}
+.svc .num{font-size:13px;font-family:Arial,sans-serif;letter-spacing:.2em;color:var(--gold);
+  opacity:.7;margin-bottom:16px}
+.svc h3{font-size:25px;font-weight:400;color:var(--cream);margin-bottom:12px;line-height:1.15}
+.svc p{font-size:16px;color:var(--muted);margin-bottom:24px;min-height:70px}
+.svc .tg{
+  display:inline-flex;align-items:center;gap:8px;font-family:Arial,sans-serif;
+  font-size:13px;letter-spacing:.05em;font-weight:600;color:var(--gold-soft);
+  border:1px solid var(--line);padding:11px 20px;border-radius:2px;transition:.25s
+}
+.svc .tg:hover{background:var(--bordo);border-color:var(--gold);color:var(--cream)}
+.svc .tg svg{width:15px;height:15px;fill:currentColor}
+
+/* channel showcase */
+.chan-top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;
+  flex-wrap:wrap;margin-bottom:48px}
+.chan-stats{display:flex;gap:38px;font-family:Arial,sans-serif}
+.stat .n{font-size:34px;color:var(--gold-soft);font-family:Georgia,serif}
+.stat .l{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.post{
+  display:flex;flex-direction:column;border:1px solid var(--line);border-radius:3px;
+  padding:26px 24px;background:rgba(22,10,15,.45);transition:.3s
+}
+.post:hover{border-color:var(--gold);transform:translateY(-4px);
+  box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.post .meta{display:flex;justify-content:space-between;font-family:Arial,sans-serif;
+  font-size:11px;letter-spacing:.08em;color:var(--muted);margin-bottom:16px}
+.post .meta .re{color:var(--gold);font-weight:600}
+.post p{font-size:15.5px;color:var(--ink);opacity:.92;flex:1;margin-bottom:18px}
+.post .open{font-family:Arial,sans-serif;font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold-soft)}
+.post:hover .open{color:var(--cream)}
+.chan-cta{text-align:center;margin-top:46px}
+
+/* contact */
+#contact{border-bottom:none;text-align:center;
+  background:radial-gradient(700px 380px at 50% 120%,rgba(90,18,32,.45),transparent)}
+#contact h2{font-size:clamp(30px,5vw,54px);font-weight:400;color:var(--cream);
+  margin-bottom:18px}
+#contact h2 em{font-style:italic;color:var(--gold-soft)}
+#contact p{max-width:520px;margin:0 auto 38px;color:var(--muted);font-size:18px}
+.contact-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+footer{padding:44px 0;text-align:center;font-family:Arial,sans-serif;
+  font-size:12px;letter-spacing:.1em;color:var(--muted);border-top:1px solid var(--line)}
+footer .ornament{color:var(--gold);font-size:18px;margin-bottom:14px}
+
+@media(max-width:860px){
+  .about-grid{grid-template-columns:1fr;gap:34px}
+  .svc-grid{grid-template-columns:1fr}
+  .posts{grid-template-columns:1fr}
+  .svc p{min-height:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="curtain-top"></div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow">Санкт-Петербург · Режиссёр · Театр и мода</div>
+    <h1>Галя Голованова-<em>Дворянкина</em></h1>
+    <div class="roles">Фэшн-режиссёр&nbsp;·&nbsp;<span>театральный эксперт</span>&nbsp;·&nbsp;куратор культурных вечеров</div>
+    <p class="lead">Ставлю модные показы и собираю людей вокруг большого искусства — от подиума до балетной сцены Мариинского.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#services">Услуги и форматы</a>
+      <a class="btn btn-ghost" href="#channel">Канал о балете и театре</a>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Кто я</div>
+      <h2>От подиума <em>к театральному залу</em></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-body">
+        <p>Моя история началась в мире моды: модель, продюсер и режиссёр фэшн-шоу, муза петербургского модного дома IANIS CHAMALIDY. Я отвечала за маркетинг модельного агентства Andy Fiord Models и основала школу визажистов Masters make up.</p>
+        <p>По образованию я режиссёр — и именно это определяет то, как я смотрю на любое искусство: не только как на впечатление, но и как на процесс. Как устроен спектакль, откуда идёт традиция, почему мы до сих пор говорим «по Станиславскому». Этот взгляд я перенесла из-за кулис показа в театральный зал.</p>
+        <p>Сегодня я режиссирую модные показы на главных площадках Петербурга и веду авторский канал о балете и театре «С Галей без очереди». Провожу культурные вечера, встречи с артистами балета и театра, читаю лекции о театральном этикете. Моя задача — сделать так, чтобы большое искусство было близким, а поход в театр — праздником, которого ждут.</p>
+      </div>
+      <aside class="facts">
+        <h3>Коротко о главном</h3>
+        <div class="fact"><div class="k">Профессия</div><div class="v"><b>Режиссёр</b> — театр и мода</div></div>
+        <div class="fact"><div class="k">Город</div><div class="v">Санкт-Петербург</div></div>
+        <div class="fact"><div class="k">Фэшн-режиссура</div><div class="v">Показы IANIS CHAMALIDY, RE:ПАССАЖ и др.</div></div>
+        <div class="fact"><div class="k">Опыт в моде</div><div class="v">Andy Fiord Models · Masters make up</div></div>
+        <div class="fact"><div class="k">Авторский канал</div><div class="v"><b>«С Галей без очереди»</b></div></div>
+        <div class="fact"><div class="k">Амплуа</div><div class="v">Профессиональный театральный зритель</div></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Услуги</div>
+      <h2>Что я <em>делаю сейчас</em></h2>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc">
+        <div class="num">01</div>
+        <h3>Режиссура модных показов</h3>
+        <p>Ставлю и режиссирую фэшн-шоу: драматургия выхода, свет, музыка, ритм и настроение — показ как цельный спектакль.</p>
+        <a class="tg" href="https://t.me/golovanovagalya" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M9.8 16.6l-.4 4c.6 0 .8-.2 1.1-.5l2.6-2.4 5.4 3.9c1 .5 1.7.3 2-.9l3.6-16.8c.3-1.4-.5-2-1.5-1.6L1.2 9.3c-1.4.5-1.3 1.3-.2 1.7l5.5 1.7L19.2 5c.6-.4 1.1-.2.7.2"/></svg>
+          Обсудить показ
+        </a>
+      </div>
+
+      <div class="svc">
+        <div class="num">02</div>
+        <h3>Культурные походы и вечера</h3>
+        <p>Организую походы в театр и культурные вечера: выбор спектакля, лучшие места, подготовка к постановке и разбор после.</p>
+        <a class="tg" href="https://t.me/golovanovagalya" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M9.8 16.6l-.4 4c.6 0 .8-.2 1.1-.5l2.6-2.4 5.4 3.9c1 .5 1.7.3 2-.9l3.6-16.8c.3-1.4-.5-2-1.5-1.6L1.2 9.3c-1.4.5-1.3 1.3-.2 1.7l5.5 1.7L19.2 5c.6-.4 1.1-.2.7.2"/></svg>
+          Записаться на вечер
+        </a>
+      </div>
+
+      <div class="svc">
+        <div class="num">03</div>
+        <h3>Встречи с артистами балета и театра</h3>
+        <p>Устраиваю закрытые встречи и обсуждения с артистами балета и театра — разговор с создателями спектакля после показа.</p>
+        <a class="tg" href="https://t.me/golovanovagalya" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M9.8 16.6l-.4 4c.6 0 .8-.2 1.1-.5l2.6-2.4 5.4 3.9c1 .5 1.7.3 2-.9l3.6-16.8c.3-1.4-.5-2-1.5-1.6L1.2 9.3c-1.4.5-1.3 1.3-.2 1.7l5.5 1.7L19.2 5c.6-.4 1.1-.2.7.2"/></svg>
+          Узнать о встречах
+        </a>
+      </div>
+
+      <div class="svc">
+        <div class="num">04</div>
+        <h3>Творческие вечера</h3>
+        <p>Готовлю и веду авторские творческие вечера, посвящённые балетам, постановкам и большим темам искусства.</p>
+        <a class="tg" href="https://t.me/golovanovagalya" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M9.8 16.6l-.4 4c.6 0 .8-.2 1.1-.5l2.6-2.4 5.4 3.9c1 .5 1.7.3 2-.9l3.6-16.8c.3-1.4-.5-2-1.5-1.6L1.2 9.3c-1.4.5-1.3 1.3-.2 1.7l5.5 1.7L19.2 5c.6-.4 1.1-.2.7.2"/></svg>
+          Пригласить / прийти
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CHANNEL -->
+<section id="channel">
+  <div class="wrap">
+    <div class="chan-top">
+      <div class="sec-head" style="margin-bottom:0">
+        <div class="eyebrow">Авторский канал</div>
+        <h2>«С Галей <em>без очереди»</em></h2>
+      </div>
+      <div class="chan-stats">
+        <div class="stat"><div class="n">7&nbsp;160</div><div class="l">подписчиков</div></div>
+        <div class="stat"><div class="n">400+</div><div class="l">авторских текстов</div></div>
+      </div>
+    </div>
+
+    <div class="posts">
+
+      <a class="post" href="https://t.me/sgaleibezocheredi/1002" target="_blank" rel="noopener">
+        <div class="meta"><span>25.11.2025</span><span class="re">♥ 145</span></div>
+        <p>Аплодисменты в театре — вещь коварная. Вроде бы хлопнул в ладоши — и выразил эмоцию. Но нет: для одних это уважение, для других — покушение на святое. Разбираемся, когда и как хлопать…</p>
+        <span class="open">Читать в Telegram →</span>
+      </a>
+
+      <a class="post" href="https://t.me/sgaleibezocheredi/945" target="_blank" rel="noopener">
+        <div class="meta"><span>13.10.2025</span><span class="re">♥ 152</span></div>
+        <p>Как меня заклеймили за ударение. История о том, как меня публично упрекнули за «Дри́го» вместо «Дриго́» в ролике о «Лебедином озере». Исправляюсь — но с фактами, а не с покаянием…</p>
+        <span class="open">Читать в Telegram →</span>
+      </a>
+
+      <a class="post" href="https://t.me/sgaleibezocheredi/1008" target="_blank" rel="noopener">
+        <div class="meta"><span>30.11.2025</span><span class="re">♥ 152</span></div>
+        <p>Есть одно место в Петербурге, где взрослые люди теряют всю выдержку и начинают вести себя как дети. Я про Мариинский! Наболевший разговор о зрительской культуре…</p>
+        <span class="open">Читать в Telegram →</span>
+      </a>
+
+      <a class="post" href="https://t.me/sgaleibezocheredi/992" target="_blank" rel="noopener">
+        <div class="meta"><span>19.11.2025</span><span class="re">♥ 152</span></div>
+        <p>Сегодня в Мариинском случилось то, что невозможно спланировать или отрепетировать. То, что рождается только здесь и сейчас — на наших глазах. О магии живого спектакля…</p>
+        <span class="open">Читать в Telegram →</span>
+      </a>
+
+      <a class="post" href="https://t.me/sgaleibezocheredi/1221" target="_blank" rel="noopener">
+        <div class="meta"><span>28.06.2026</span><span class="re">♥ 123</span></div>
+        <p>«Жизели» исполняется 185 лет. Почему в афишах всех театров мира до сих пор стоят три фамилии создателей вместо одной — и как красивая ошибка советского балетоведа обошла весь мир…</p>
+        <span class="open">Читать в Telegram →</span>
+      </a>
+
+      <a class="post" href="https://t.me/sgaleibezocheredi/1041" target="_blank" rel="noopener">
+        <div class="meta"><span>18.01.2026</span><span class="re">♥ 129</span></div>
+        <p>Я по образованию режиссёр — и потому люблю говорить о театре как о процессе. Небольшой экскурс в режиссёрский театр XX века: от Станиславского до методов, сформировавших сегодняшнюю сцену…</p>
+        <span class="open">Читать в Telegram →</span>
+      </a>
+
+    </div>
+
+    <div class="chan-cta">
+      <a class="btn btn-primary" href="https://t.me/sgaleibezocheredi" target="_blank" rel="noopener">
+        Подписаться на канал
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="margin-bottom:20px">Связаться</div>
+    <h2>Пойдёмте <em>в театр вместе</em></h2>
+    <p>Показ, культурный вечер, встреча с артистами или творческий вечер — напишите мне в Telegram, обсудим формат.</p>
+    <div class="contact-btns">
+      <a class="btn btn-primary" href="https://t.me/golovanovagalya" target="_blank" rel="noopener">Написать в Telegram</a>
+      <a class="btn btn-ghost" href="https://t.me/sgaleibezocheredi" target="_blank" rel="noopener">Канал о балете и театре</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ornament">✦</div>
+    Галя Голованова-Дворянкина · Санкт-Петербург · режиссёр, театральный эксперт
+  </div>
+</footer>
+
+</body>
+</html>
